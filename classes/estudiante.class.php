@@ -92,7 +92,7 @@ class estudiante
                 "id_genero" => $idgenero
             );
 
-            $resultado = $this->conexion->run('INSERT INTO estudiante(fecha_nacimiento_estudiante, id_Genero)VALUES(:fecha_nac,:id_genero):', $parametros);
+            $resultado = $this->conexion->run('INSERT INTO estudiante(fecha_nacimiento_estudiante, id_Genero)VALUES(:fecha_nac,:id_genero)', $parametros);
             if($this->conexion->n > 0 and $this->conexion->id > 0)
             {
                 $resultado = $this-> obtenerEstudiante($this->conexion->id);
